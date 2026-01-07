@@ -1,0 +1,17 @@
+.valueDisplay {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+}
+
+.codeDisplay {
+  display: inline-block;
+  width: 2.5rem;
+  text-align: right;
+}
+
+.stepsDisplay {
+  display: inline-block;
+  width: 5rem;
+  text-align: right;
+}

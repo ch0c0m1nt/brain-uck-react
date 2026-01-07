@@ -1,0 +1,9 @@
+.tapeValues {
+  width: 2rem;
+  height: 1.2rem;
+  text-align: right;
+}
+
+.tapeValues.active {
+  background-color: #cfcfef;
+}
