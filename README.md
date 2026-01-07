@@ -7,14 +7,19 @@ A Brainfuck interpreter playground built with React.
 **brain-uck-react** is a small web-based **Brainfuck interpreter and playground**.
 It allows you to write, run, and experiment with Brainfuck code directly in the browser.
 
-This project is currently a **prototype**, focusing on simplicity, clarity, and hackability.
+This project is a **prototype**, focusing on simplicity, clarity, and hackability,
+while using **modern React tooling**.
 
-## ⚠️ Project Status
-- This project was **bootstrapped with Create React App (CRA)**
-- CRA is now considered legacy
-- **Migration to Vite + modern tooling is planned**, but intentionally postponed
+## 🧩 Design Note
+This playground intentionally **does not implement Brainfuck input (`,`)**.
+It focuses on **deterministic execution and visualization**, which is also reflected
+in the project name — *brain-uck*.
 
-> The current goal is correctness and UX exploration, not build tooling perfection.
+## 🛠️ Tech Stack
+- **React (latest)**
+- **Vite**
+- **pnpm**
+- TypeScript (if applicable)
 
 ## 🔥 Features
 - 🧪 Brainfuck code editor
@@ -23,8 +28,7 @@ This project is currently a **prototype**, focusing on simplicity, clarity, and 
 - 🧾 Output view (stdout)
 - ⚡ Fast feedback loop for experimentation
 
-## 🚀 Quick Start (CRA)
+## 🚀 Quick Start
 ```bash
-npm install
-npm start
-
+pnpm install
+pnpm dev
