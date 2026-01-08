@@ -1,5 +1,6 @@
 import { useState } from "react";
-import styles from "./TapeTable.module.css";
+import styled, { css } from "styled-components";
+
 
 interface TapeTableProps {
   tape: number[];
@@ -19,6 +20,16 @@ const visibleStrings: { [_: string]: string } = {
   false: "SHOW",
   true: "HIDE",
 };
+
+const TapeValues = styled.td<{ $active?: boolean }>`
+  width: 2rem;
+  height: 1.2rem;
+  text-align: right;
+
+  ${props => props.$active && css`
+    background-color: #cfcfef;
+  `}
+`;
 
 export default function TapeTable({ tape, head }: TapeTableProps) {
   const [visible, setVisible] = useState<boolean>(true);
@@ -45,16 +56,11 @@ export default function TapeTable({ tape, head }: TapeTableProps) {
                 {tapeSlice.map((data: number[], i) => (
                   <tr key={"tr-" + i}>
                     {data.map((num, j) => (
-                      <td
-                        className={
-                          head === i * 10 + j
-                            ? `${styles.tapeValues} ${styles.active}`
-                            : styles.tapeValues
-                        }
+                      <TapeValues $active={head === i * 10 + j}
                         key={"td-" + (i * 10 + j)}
                       >
                         {num}
-                      </td>
+                      </TapeValues>
                     ))}
                   </tr>
                 ))}
