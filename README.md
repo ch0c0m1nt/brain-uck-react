@@ -19,7 +19,12 @@ in the project name — *brain-uck*.
 - **React (latest)**
 - **Vite**
 - **pnpm**
-- TypeScript (if applicable)
+- TypeScript
+- styled-components
+
+## 🎨 Styling (Rationale)
+- **styled-components** for co-located styles and rapid UI iteration
+- optimized for experimentation and refactoring in a prototype codebase
 
 ## 🔥 Features
 - 🧪 Brainfuck code editor
